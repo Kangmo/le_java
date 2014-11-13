@@ -521,7 +521,10 @@ public class AsyncLogger {
 				this.le_client.connect();
 
 				if(httpPut){
-					final String f = "PUT /%s/hosts/%s/?realtime=1 HTTP/1.1\r\n\r\n";
+//                  The original code. 
+//					final String f = "PUT /%s/hosts/%s/?realtime=1 HTTP/1.1\r\n\r\n";
+//                  The new code by kangmo to make it work with play framework.
+					final String f = "PUT /%s/hosts/%s/?realtime=1 HTTP/1.1\r\nContent-Length: 10000000\r\nContent-Type: multipart/form-data\r\nExpect: 100-continue\r\n\r\n";
 					final String header = String.format( f, key, location);
 					byte[] temp = header.getBytes( ASCII);
 					this.le_client.write( temp, 0, temp.length);
