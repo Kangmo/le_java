@@ -2,7 +2,7 @@
 <configuration>
 
 	<appender name="LE"
-		class="com.logentries.logback.LogentriesAppender">
+		class="org.kangmo.logback.LogentriesAppender">
 		<Token>LOGENTRIES_TOKEN</Token>
 		<Debug>False</Debug>
 		<Ssl>False</Ssl>

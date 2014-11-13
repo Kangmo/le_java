@@ -37,7 +37,7 @@ Place this in your pom.xml
             <version>1.2.17</version>
         </dependency>
         <dependency>
-            <groupId>com.logentries</groupId>
+            <groupId>org.kangmo</groupId>
             <artifactId>logentries-appender</artifactId>
             <version>RELEASE</version>
         </dependency>
@@ -70,7 +70,7 @@ In this file, you will see the following:
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
     <log4j:configuration debug="true">
-    <appender name="le" class="com.logentries.log4j.LogentriesAppender">
+    <appender name="le" class="org.kangmo.log4j.LogentriesAppender">
         <!-- Enter your Logentries token, like bc0c4f90-a2d6-11e1-b3dd-0800200c9a66 -->
         <!-- Or set an evironment variable like LOGENTRIES_TOKEN=bc0c4f90-a2d6-11e1-b3dd-0800200c9a66 -->
         <param name="Token" value="LOGENTRIES_TOKEN" />
@@ -102,7 +102,7 @@ To log to a DataHub we can change log4j.xml configuration to send logs to your i
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
     <log4j:configuration debug="true">
-    <appender name="le" class="com.logentries.log4j.LogentriesAppender">
+    <appender name="le" class="org.kangmo.log4j.LogentriesAppender">
         <!-- Enter your Logentries token, like bc0c4f90-a2d6-11e1-b3dd-0800200c9a66 -->
         <!-- Or set an evironment variable like LOGENTRIES_TOKEN=bc0c4f90-a2d6-11e1-b3dd-0800200c9a66 -->
         <param name="Token" value="LOGENTRIES_TOKEN" />
@@ -187,7 +187,7 @@ Place this in your pom.xml
             <version>1.0.11</version>
         </dependency>
         <dependency>
-            <groupId>com.logentries</groupId>
+            <groupId>org.kangmo</groupId>
             <artifactId>logentries-appender</artifactId>
             <version>RELEASE</version>
         </dependency>
@@ -206,7 +206,7 @@ In this file, you will see the following:
     <configuration>
 
         <appender name="LE"
-            class="com.logentries.logback.LogentriesAppender">
+            class="org.kangmo.logback.LogentriesAppender">
             <Token>LOGENTRIES_TOKEN</Token>
             <Ssl>False</Ssl>
             <facility>USER</facility>
@@ -233,7 +233,7 @@ To log to a DataHub we can change logback.xml configuration to send logs to your
     <configuration>
 
         <appender name="LE"
-            class="com.logentries.logback.LogentriesAppender">
+            class="org.kangmo.logback.LogentriesAppender">
             <Token>LOGENTRIES_TOKEN</Token>
             <Ssl>False</Ssl>
             <IsUsingDataHub>True</IsUsingDataHub>
