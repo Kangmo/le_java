@@ -1,4 +1,4 @@
-package com.logentries.logback;
+package org.kangmo.logback;
 
 import ch.qos.logback.classic.spi.IThrowableProxy;
 import ch.qos.logback.classic.spi.StackTraceElementProxy;

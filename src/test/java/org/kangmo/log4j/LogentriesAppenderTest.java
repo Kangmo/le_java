@@ -1,7 +1,8 @@
-package com.logentries.log4j;
+package org.kangmo.log4j;
 
 import static org.junit.Assert.*;
 
+import org.kangmo.log4j.LogentriesAppender;
 import org.junit.Test;
 
 public class LogentriesAppenderTest {

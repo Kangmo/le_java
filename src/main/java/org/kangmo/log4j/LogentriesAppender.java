@@ -1,9 +1,9 @@
-package com.logentries.log4j;
+package org.kangmo.log4j;
 
 import org.apache.log4j.AppenderSkeleton;
 import org.apache.log4j.spi.LoggingEvent;
 
-import com.logentries.net.AsyncLogger;
+import org.kangmo.net.AsyncLogger;
 
 /**
  * Logentries appender for log4j.

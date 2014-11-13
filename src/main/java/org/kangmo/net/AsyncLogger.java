@@ -1,4 +1,4 @@
-package com.logentries.net;
+package org.kangmo.net;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -8,8 +8,6 @@ import java.util.Random;
 import java.util.UUID;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.regex.Pattern;
-
-import org.apache.log4j.helpers.LogLog;
 
 /**
  * Logentries Asynchronous Logger for integration with Java logging frameworks.

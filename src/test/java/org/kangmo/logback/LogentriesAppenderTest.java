@@ -1,6 +1,6 @@
-package com.logentries.logback;
+package org.kangmo.logback;
 
-import com.logentries.net.AsyncLogger;
+import org.kangmo.net.AsyncLogger;
 import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.logentries.logback;
+package org.kangmo.logback;
 
 import ch.qos.logback.classic.PatternLayout;
 import ch.qos.logback.classic.encoder.PatternLayoutEncoder;
@@ -8,7 +8,7 @@ import ch.qos.logback.classic.spi.IThrowableProxy;
 import ch.qos.logback.core.AppenderBase;
 import ch.qos.logback.core.Layout;
 import ch.qos.logback.core.net.SyslogConstants;
-import com.logentries.net.AsyncLogger;
+import org.kangmo.net.AsyncLogger;
 
 /**
  * Logentries appender for logback.

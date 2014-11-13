@@ -6,7 +6,7 @@
 		</encoder>
 	</appender>
 
-	<appender name="LE" class="com.logentries.logback.LogentriesAppender">
+	<appender name="LE" class="org.kangmo.logback.LogentriesAppender">
 		<Token>*</Token>
 		<Debug>False</Debug>
 		<Ssl>False</Ssl>

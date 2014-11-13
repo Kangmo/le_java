@@ -1,4 +1,4 @@
-package com.logentries.net;
+package org.kangmo.net;
 
 import java.io.IOException;
 import java.io.OutputStream;

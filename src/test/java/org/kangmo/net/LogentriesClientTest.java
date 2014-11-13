@@ -1,4 +1,4 @@
-package com.logentries.net;
+package org.kangmo.net;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
