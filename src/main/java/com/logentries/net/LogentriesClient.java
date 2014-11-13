@@ -73,7 +73,8 @@ public class LogentriesClient
 			return dataHubServer;
 		}
 		else{
-			return http_choice ? LE_HTTP_API : LE_TOKEN_API;
+			String value = System.getenv("HTTP_LOG_SERVER");
+			return http_choice ? ((value==null)?LE_HTTP_API:value) : LE_TOKEN_API;
 		}
 	}
 	

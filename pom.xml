@@ -12,13 +12,13 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.logentries</groupId>
-    <artifactId>logentries-appender</artifactId>
+    <groupId>com.logcat</groupId>
+    <artifactId>logcat-appender</artifactId>
     <packaging>jar</packaging>
     <name>Logentries Appender</name>
     <version>1.1.28-SNAPSHOT</version>
     <description>Contains logback and log4j appenders that will send log data to Logentries</description>
-    <url>https://github.com/logentries/le_java</url>
+    <url>https://github.com/kangmo/le_java</url>
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -27,15 +27,20 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:git:git@github.com:logentries/le_java.git</connection>
-        <developerConnection>scm:git:git@github.com:logentries/le_java.git</developerConnection>
-        <url>https://github.com/logentries/le_java</url>
+        <connection>scm:git:git@github.com:kangmo/le_java.git</connection>
+        <developerConnection>scm:git:git@github.com:kangmo/le_java.git</developerConnection>
+        <url>https://github.com/kangmo/le_java</url>
     </scm>
     <developers>
         <developer>
             <id>MarkLC</id>
             <name>Mark Lacomber</name>
             <email>marklacomber@gmail.com</email>
+        </developer>
+        <developer>
+            <id>Kangmo</id>
+            <name>Kangmo Kim</name>
+            <email>kangmo.kim@gmail.com</email>
         </developer>
     </developers>
 
