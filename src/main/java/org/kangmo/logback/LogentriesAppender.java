@@ -66,6 +66,15 @@ public class LogentriesAppender extends AppenderBase<ILoggingEvent> {
 	}
 
 	/**
+	 *  Sets the HTTP server address. This is used to override the default one, api.logentries.com
+	 *
+	 *  @param httpHostAddress The overriden value of the HTTP host address.
+	 */
+	public void setHttpHostAddress( String httpHostAddress ) {
+		this.le_async.setHttpHostAddress(httpHostAddress);
+	}
+
+	/**
 	 * Sets the HTTP PUTflag. <p>Send logs via HTTP PUT instead of default Token
 	 * TCP.</p>
 	 *

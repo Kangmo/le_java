@@ -68,6 +68,8 @@ public class AsyncLogger {
 	String key = "";
 	/** Account Log Location. */
 	String location = "";
+	/** Http Host address. We need this to override the default log server, api.logentries.com */
+	String httpHostAddress = "";
 	/** HttpPut flag. */
 	boolean httpPut = false;
 	/** SSL/TLS flag. */
@@ -117,6 +119,15 @@ public class AsyncLogger {
 	 */
 	public String getToken() {
 		return token;
+	}
+
+	/**
+	 *  Sets the HTTP server address. This is used to override the default one, api.logentries.com
+	 *
+	 *  @param httpHostAddress The overriden value of the HTTP host address.
+	 */
+	public void setHttpHostAddress( String httpHostAddress) {
+		this.httpHostAddress = httpHostAddress;
 	}
 
 	/**
@@ -504,7 +515,7 @@ public class AsyncLogger {
 		void openConnection() throws IOException {
 			try{
 				if(this.le_client == null){
-					this.le_client = new LogentriesClient(httpPut, ssl, useDataHub, dataHubAddr, dataHubPort);
+					this.le_client = new LogentriesClient(httpHostAddress, httpPut, ssl, useDataHub, dataHubAddr, dataHubPort);
 				}
 
 				this.le_client.connect();

@@ -38,8 +38,10 @@ public class LogentriesClient
 	private String dataHubServer = LE_TOKEN_API;
 	private int dataHubPort = LE_PORT;
 	private boolean useDataHub = false;
+	private String httpHostAddress = "";
 	
-	public LogentriesClient(boolean httpPut, boolean ssl, boolean isUsingDataHub, String server, int port)
+	// httpHostAddress is set to a non-empty string if we wanted to override the default log server, LE_HTTP_API, which is api.logentries.com
+	public LogentriesClient(String httpHostAddress, boolean httpPut, boolean ssl, boolean isUsingDataHub, String server, int port)
 	{
 		if(isUsingDataHub){
 			ssl_factory = null; // DataHub does not support input over SSL for now,
@@ -52,6 +54,7 @@ public class LogentriesClient
 			ssl_factory = (SSLSocketFactory) SSLSocketFactory.getDefault();
 			ssl_choice = ssl;
 			http_choice = httpPut;
+			this.httpHostAddress = httpHostAddress;
 		}
 	}
 
@@ -73,8 +76,12 @@ public class LogentriesClient
 			return dataHubServer;
 		}
 		else{
-			String value = System.getenv("HTTP_LOG_SERVER");
-			return http_choice ? ((value==null)?LE_HTTP_API:value) : LE_TOKEN_API;
+			String httpAddress = 
+			(httpHostAddress != null && httpHostAddress.length() > 0) ? 
+  			httpHostAddress : 
+			LE_HTTP_API ;
+			
+			return http_choice ? httpAddress : LE_TOKEN_API;
 		}
 	}
 	
